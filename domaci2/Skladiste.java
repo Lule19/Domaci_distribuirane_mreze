@@ -1,5 +1,5 @@
 
-package com.mycompany.domaci2;
+package com.mycompany.domaci22;
 
 public class Skladiste {
     
@@ -19,6 +19,10 @@ public class Skladiste {
     
     public int getId(){
         return id;
+    }
+    
+     public int[] getNiz() {
+        return niz;
     }
     
     public Skladiste (int kapacitet){

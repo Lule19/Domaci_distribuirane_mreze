@@ -1,5 +1,5 @@
 
-package com.mycompany.domaci2;
+package com.mycompany.domaci22;
 
 
 public class Potrosac extends Thread{
@@ -17,16 +17,22 @@ public class Potrosac extends Thread{
     }
     
    public void run() {
-		System.out.println("Potrosac " + id + " je krenuo sa radom");
+	/*	
+       System.out.println("Potrosac " + id + " je krenuo sa radom");
+        */
 		try {
 	        while(!interrupted()){
                 int trajanje = minTime + (int) (Math.random() * (maxTime - minTime));
                 sleep(trajanje);
                 int proizvod = skladiste.Uzmi();
+                /*
                 System.out.println("Potrosac " + id + " je uzeo proizvod " + proizvod);
+                */
             }
         } catch (InterruptedException ex) {
+            /*
             System.out.println("Potrosac " + id + " je zavrsio sa radom");
+            */
         }
 	}
     

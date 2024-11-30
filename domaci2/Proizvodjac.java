@@ -1,4 +1,4 @@
-package com.mycompany.domaci2;
+package com.mycompany.domaci22;
 
 import java.util.logging.Level; 
 import java.util.logging.Logger; 
@@ -22,18 +22,24 @@ public class Proizvodjac extends Thread {
     }
     
     public void run (){
+        /*
         System.out.println("Proizvodjac "+id+" je krenuo sa proizvodnjom");
+        */
         try{
             while(!interrupted()){
                 int trajanje = minTime + (int)Math.random()*(maxTime-minTime);
                 sleep(trajanje);
                 int proizvod = id*1000 + brojac++;
                 skladiste.Stavi(proizvod);
+                /*
                 System.out.println("Proizveden je proizvod" + proizvod);
-                
+                */
             }
         } catch (InterruptedException ex){
+            /*
             System.out.println("Proizvodjac " +id+ "je zavrsio sa radom");
+            */
         }
     }
+
 }
